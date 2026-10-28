@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POPUP APOCALYPSE™ — Click responsibly (you won't)</title>
+<style>
+:root{--yellow:#ffed00;--pink:#ff00ae;--cyan:#00f6ff;--ink:#170033}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--ink);font-family:'Comic Sans MS','Trebuchet MS',sans-serif;background:repeating-linear-gradient(45deg,#fafd00 0 35px,#ff66db 35px 70px,#00f6ff 70px 105px);overflow-x:hidden}body.worse{animation:hue 8s linear infinite}body.worse .headline{animation:shake 1.5s linear infinite}@keyframes hue{to{filter:hue-rotate(360deg)}}@keyframes shake{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}@keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}@keyframes blink{50%{opacity:.25}}@keyframes pop{from{transform:translate(-50%,-45%) scale(.85);opacity:0}to{transform:translate(-50%,-50%) scale(1);opacity:1}}button{font:inherit;cursor:pointer;border:3px outset white;box-shadow:4px 4px #140022;padding:11px 15px;font-weight:900}button:hover{filter:brightness(1.06)}button:focus-visible{outline:4px solid #111;outline-offset:3px}.bar{display:flex;justify-content:space-between;gap:8px;align-items:center;background:#170033;color:white;padding:10px 14px;position:relative;z-index:200}.bar button{padding:7px;font-size:12px}.banner{background:#ff0000;color:#fff;font-size:17px;font-weight:900;text-align:center;padding:8px;animation:blink 3s ease-in-out infinite}.wrap{max-width:1020px;margin:0 auto;padding:22px 16px 90px;text-align:center}.eyebrow{font-size:19px;font-weight:1000;background:lime;display:inline-block;padding:8px;transform:rotate(-3deg);border:4px dashed red}.headline{margin:18px auto 8px;max-width:950px;font-size:clamp(52px,10vw,115px);line-height:.88;letter-spacing:-5px;color:#ff0000;-webkit-text-stroke:2px #101010;text-shadow:7px 7px 0 #00ff00,13px 13px 0 blue;animation:bob 1.5s infinite}.sub{display:inline-block;background:#fff;padding:12px 22px;border:7px ridge blue;font-size:clamp(17px,3vw,26px);font-weight:900;transform:rotate(1.5deg)}.hero-buttons{margin-top:28px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px}.primary{background:lime;color:red;font-size:clamp(18px,3vw,27px);padding:20px;animation:bob 2s infinite}.danger{background:#f00;color:#fff}.minor{background:#fff}.counter{margin:26px auto 0;background:#170033;color:white;max-width:650px;padding:13px;font-size:20px;border:6px dotted white}.score{font-size:44px;color:yellow}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:25px auto;text-align:left}.card{background:white;border:7px ridge #ff0000;padding:15px;box-shadow:10px 10px #111;transform:rotate(-2deg)}.card:nth-child(2){background:#00ff4c;transform:rotate(3deg)}.card:nth-child(3){background:#ffae00;transform:rotate(-1deg)}.card h3{margin:0 0 8px}.card p{margin:0}.ticker{margin-top:32px;background:blue;color:yellow;padding:9px;font-weight:1000;overflow:hidden;white-space:nowrap}.ticker span{display:inline-block;animation:scroll 17s linear infinite}@keyframes scroll{to{transform:translateX(-110%)}}.overlay{position:fixed;inset:0;background:#12002791;z-index:300}.popup{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(94vw,500px);max-height:88vh;overflow:auto;z-index:310;background:#eee;border:5px outset #ddd;box-shadow:14px 14px 0 #100020;animation:pop .2s ease-out}.popup-head{display:flex;align-items:center;justify-content:space-between;gap:5px;background:linear-gradient(90deg,#09018a,#00b8e6);color:white;padding:7px 8px;text-align:left;font-weight:900}.popup-head button{font-size:16px;padding:1px 9px;background:#ddd;color:black;box-shadow:none;border:2px outset white}.popup-inner{text-align:center;padding:22px 18px}.popup-inner h2{font-size:clamp(22px,4vw,32px);margin:0 0 10px}.popup-inner p{font-size:17px}.actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin:20px 0 0}.actions button{background:#fff}.actions button:first-child{background:yellow}.mini{font-size:12px!important;color:#555}.toast{position:fixed;bottom:19px;right:15px;z-index:450;background:#150035;color:white;padding:15px;border:3px dotted yellow;max-width:330px;box-shadow:5px 5px #ff00ae}.hidden{display:none!important}.fake-ad{position:fixed;bottom:16px;left:10px;z-index:250;background:#fff700;border:5px dashed red;padding:11px;text-align:center;max-width:220px;font-size:13px;box-shadow:5px 5px #111}.fake-ad button{font-size:12px;padding:5px}.rain{position:fixed;pointer-events:none;z-index:500;font-size:35px;animation:fall 2.4s linear forwards}@keyframes fall{from{transform:translateY(-20vh) rotate(0);opacity:1}to{transform:translateY(115vh) rotate(580deg);opacity:0}}.cert{border:9px double gold;background:#fff4bb;padding:15px;transform:rotate(-2deg)}.cert strong{display:block;font-size:24px;color:blue}@media(max-width:650px){.cards{grid-template-columns:1fr}.fake-ad{display:none}.headline{letter-spacing:-2px}.wrap{padding-top:12px}.bar{align-items:flex-start}.bar span{max-width:160px}.counter{font-size:15px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+
+.login-zone{margin:30px auto 34px;max-width:650px;background:#f9f9ff;border:9px ridge #f0f;box-shadow:13px 13px 0 #140022;padding:20px;text-align:left;transform:rotate(.7deg)}.login-zone h2{text-align:center;margin:0 0 8px;font-size:clamp(25px,5vw,39px);color:#e90030;text-shadow:2px 2px #00e5ff}.login-zone .login-hint{text-align:center;margin:5px 0 15px;font-weight:800}.login-zone label{display:block;margin:10px 0 3px;font-weight:900}.login-zone input{display:block;width:100%;font:inherit;padding:10px;border:4px inset #aaa;background:#fff}.password-row{display:flex;gap:10px;align-items:stretch}.password-row input{flex:1}.show-laugh{background:#fff700;color:#170033;font-size:14px;padding:10px 12px;white-space:nowrap;align-self:stretch}.laugh-wall{display:none;margin-top:10px;padding:12px;border:4px dashed #ff00ae;background:#fff6a8;text-align:center;font-size:28px;line-height:1.35}.laugh-wall.show{display:block;animation:bob .9s infinite}.laugh-wall .laugh-note{display:block;font-size:14px;font-weight:900;margin-top:6px;color:#a00044}.login-arena{margin-top:15px;position:relative;height:330px;border:4px dashed #ff2424;background:repeating-linear-gradient(-45deg,#fffab2 0 16px,#ffdbf4 16px 32px);overflow:hidden}.login-arena button{position:absolute;left:50%;top:82%;transform:translate(-50%,-50%);background:#19ff00;color:#170033;white-space:nowrap;min-width:128px;max-width:95%;z-index:2;transition:left .06s,top .06s}.login-arena button.final{background:#ffff00;animation:blink .75s infinite}.login-status{text-align:center;background:#170033;color:#fff;padding:8px;font-weight:900;min-height:42px}.login-disclaimer{font-size:12px;text-align:center;margin:9px 0 0}#loginAttempts{font-variant-numeric:tabular-nums}@media(max-width:560px){.password-row{flex-direction:column}.show-laugh{width:100%}}
+
+.control-lab{margin:30px auto;padding:20px;background:#00ffff;border:8px double #ff00ae;box-shadow:10px 10px #170033;transform:rotate(-1deg)}
+.control-lab h2{font-size:30px;margin:0 0 8px}.lab-controls{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:16px 0}
+.volume-label{display:block;background:#fff;padding:12px;border:3px solid #170033;max-width:500px;margin:auto}
+.volume-label input{width:100%;accent-color:#f000b5}.volume-label output{display:block;font-weight:900}
+body.repaired{background:#f5f5f0;color:#222;font-family:Arial,sans-serif}body.repaired .headline{animation:none;color:#222;text-shadow:none;-webkit-text-stroke:0;font-size:clamp(40px,7vw,76px);letter-spacing:-2px}body.repaired .banner,body.repaired .eyebrow,body.repaired .fake-ad,body.repaired .ticker{visibility:hidden}body.repaired .sub,body.repaired .card,body.repaired .login-zone,body.repaired .control-lab{background:#fff;border:1px solid #ddd;box-shadow:none;transform:none}body.repaired button{animation:none;background:#222;color:white;border:0;box-shadow:none}body.repaired .bar{background:#222}
+.cookie-meter{height:26px;background:#222;border:3px inset #aaa;margin:18px 0}.cookie-meter span{display:block;height:100%;background:#f0f;transition:width .3s}.receipt{font-family:monospace;text-align:left;background:#fffef0;border:2px dashed #222;padding:15px;white-space:pre-wrap}
+
+</style>
+</head>
+<body>
+<header class="bar"><span>⚠️ NOT SECURELY FUN™ <b>v.0.0.0.1</b></span><div><button id="reset">↻ RESET DEMO</button> <button id="sound" aria-pressed="false">🔇 SOUND OFF</button></div></header>
+<div class="banner">🚨 WARNING: THIS WEBSITE HAS BEEN APPROVED BY ABSOLUTELY NOBODY 🚨</div>
+<main class="wrap"><div class="eyebrow">🏆 INTERNET'S #1 MOST QUESTIONABLE EXPERIENCE*</div><h1 class="headline">POPUP<br>APOCALYPSE!!!</h1><p class="sub">ONE simple goal: claim your VERY OFFICIAL certificate.<br>Estimated completion time: emotionally, 7 years.</p><div class="hero-buttons"><button class="primary" id="start">🎁 CLAIM MY CERTIFICATE!!!</button><button class="danger" id="worse">☣ MAKE WEBSITE WORSE</button><button class="minor" id="help">❓ EXTREMELY UNHELPFUL HELP</button></div><div class="counter">POPUPS SURVIVED: <span class="score" id="count">0</span><br><small>Customer satisfaction: <span id="satisfaction">100% (unverified)</span></small></div><section class="control-lab" aria-labelledby="labTitle"><h2 id="labTitle">⚙️ USER DISCOMFORT CENTRE</h2><p>Finally. Settings that put you last.</p><div class="lab-controls"><button id="cookieSettings">🍪 REJECT ALL COOKIES</button><button id="repairSite">✨ FIX THIS WEBSITE</button><button id="receiptButton">🧾 REQUEST A REFUND</button></div><label class="volume-label" for="volumeKnob">🔊 VOLUME <small>(probably)</small><input id="volumeKnob" type="range" min="0" max="100" value="50"><output id="volumeOutput" for="volumeKnob">50% · Drag to improve your experience*</output></label><p class="mini">*Improvement sold separately. No actual purchases. No actual cookies.</p></section><section class="login-zone" aria-labelledby="loginTitle"><h2 id="loginTitle">🔐 EXTREMELY SECURE SIGN-IN</h2><p class="login-hint">Sign in to a service that does not exist!</p><form id="fakeLogin" autocomplete="off"><label for="loginEmail">Definitely your email</label><input id="loginEmail" type="email" placeholder="fake@example.com" autocomplete="off" required><label for="loginPassword">Definitely your password</label><div class="password-row"><input id="loginPassword" type="password" placeholder="Use an imaginary password" autocomplete="off" required><button class="show-laugh" id="showPassword" type="button">SHOW PASSWORD</button></div><div class="laugh-wall" id="laughWall" aria-live="polite">😂 🤣 😹 😆 🤭 😂 🤣<span class="laugh-note">HAHA! You really thought this site would show your password?</span></div><div class="login-arena" id="loginArena"><button id="loginButton" type="submit">SIGN IN (IF YOU CAN)</button></div><p class="login-status" id="loginStatus" aria-live="polite">Button evasions: <span id="loginAttempts">0</span> / 8</p><p class="login-disclaimer">Demo only — use made-up details. Nothing is sent, stored or verified.</p></form></section><section class="cards"><article class="card"><h3>✅ 100% FUNCTIONAL</h3><p>All interruptions successfully interrupt you.</p></article><article class="card"><h3>🍪 FULL COOKIE SUPPORT</h3><p>Biscuits may be substituted without notice.</p></article><article class="card"><h3>🏅 AWARD-LOSING DESIGN</h3><p>Scientifically engineered to ruin the user journey.</p></article></section><div class="ticker"><span>BREAKING NEWS: LOCAL WEBSITE CLAIMS IT IS NOT A WEBSITE • YOU ARE VISITOR #0000001 • PRESSING BUTTONS MAY LEAD TO MORE BUTTONS • OUR CUSTOMER SUPPORT IS A POTATO •</span></div><p><small>*Source: we made it up. No personal data collected or transmitted. The suffering is local to your browser.</small></p></main>
+<div class="fake-ad" id="ad"><b>CONGRATULATIONS!!!</b><br>You are our one-billionth visitor!<br><button id="adButton">Claim nothing</button></div>
+<div class="overlay hidden" id="overlay"></div><div class="popup hidden" id="popup" role="dialog" aria-modal="true" aria-labelledby="popTitle"><div class="popup-head"><span id="windowTitle">URGENT.EXE</span><button id="close" aria-label="Close popup">×</button></div><div class="popup-inner" id="popupInner"></div></div><div class="toast hidden" id="toast" role="status"></div>
+<script>
+(()=>{'use strict';const $=id=>document.getElementById(id);let step=0,closed=0,chaos=false,sound=false,toastTimer,loadingTimer,flight=0,closureTimer,lastFocus;const stages=[
+{title:'CRITICAL COOKIE EMERGENCY',heading:'🍪 Do you accept cookies?',body:'Our legal department urgently needs to know whether you prefer chocolate chip or tennis biscuits.',buttons:[['Accept cookies','cookieYes'],['Accept biscuits','cookieNo'],['Reject nutrition','cookieNo']]},
+{title:'HUMAN VERIFICATION 4000',heading:'🤖 Prove you are NOT a popup',body:'This security test was designed by a popup. It is completely unbiased.',buttons:[['I am a human','human'],['I am 3 popups in a coat','human']]},
+{title:'AN IMPORTANT SURVEY',heading:'📊 Rate your experience so far',body:'We take feedback extremely personally.',buttons:[['⭐ 1 star','rate'],['⭐⭐⭐⭐⭐ 5 stars','rate'],['I refuse to participate','rate']]},
+{title:'UNSKIPPABLE UPGRADE',heading:'💎 Upgrade to POPUP PREMIUM',body:'For R0.00 you can unlock exactly the same popups in a slightly different order.',buttons:[['Subscribe for free','upgrade'],['No thanks','upgrade']]},
+{title:'THE FINAL FINAL STEP',heading:'⏳ Verifying your verification...',body:'We are almost ready to begin thinking about finishing.',buttons:[['START LOADING','load']]}
+];
+// The button escapes upward on pointer hover, then eventually surrenders.
+const loginButton=$('loginButton'),loginArena=$('loginArena'),showPassword=$('showPassword'),laughWall=$('laughWall'),passwordInput=$('loginPassword');let dodges=0,lastDodge=0,loginDone=false,passwordOwnerShown=false;
+function burstLaugh(){for(let i=0;i<14;i++){let s=document.createElement('span');s.className='rain';s.textContent=['😂','🤣','😹','😆','🤭'][i%5];s.style.left=(Math.random()*100)+'vw';s.style.top=(-10-Math.random()*35)+'vh';s.style.animationDelay=(Math.random()*.4)+'s';document.body.append(s);setTimeout(()=>s.remove(),3500)}}
+function resetLogin(){passwordOwnerShown=false;dodges=0;loginDone=false;lastDodge=0;loginButton.classList.remove('final');loginButton.textContent='SIGN IN (IF YOU CAN)';loginButton.style.left='50%';loginButton.style.top='82%';$('loginStatus').innerHTML='Button evasions: <span id="loginAttempts">0</span> / 8';laughWall.classList.remove('show');$('fakeLogin').reset();passwordInput.type='password'}
+function dodgeLogin(){
+ if(loginDone||dodges>=8)return;
+ const now=Date.now();if(now-lastDodge<180)return;lastDodge=now;
+ dodges++;$('loginAttempts').textContent=String(dodges);
+ const phrases=['NOPE! MOVING UP!','TOO SLOW!','YOU CANNOT CATCH ME','HIGHER AND HIGHER!','KEEP TRYING!','ALMOST THERE!','I AM EXHAUSTED!','FINE! YOU WIN. CLICK ME!'];
+ if(dodges>=8){loginButton.classList.add('final');loginButton.textContent=phrases[7];loginButton.style.left='50%';loginButton.style.top='50%';$('loginStatus').textContent='The button has surrendered. You can now sign in.';note('The sign-in button has surrendered!');return}
+ loginButton.textContent=phrases[dodges-1];
+ // Escape upward, then jump back down and repeat so the chase can continue.
+ const heights=[64,43,22,9,72,49,21];
+ loginButton.style.top=heights[dodges-1]+'%';
+ const half=loginButton.offsetWidth/2+8;const available=loginArena.clientWidth;loginButton.style.left=Math.max(half,Math.min(available-half,available*(dodges%2===0?.69:.31)))+'px';
+ $('loginStatus').setAttribute('data-dodges',String(dodges));beep();
+}
+// React BEFORE the cursor touches the button. This works even for quick mouse movement.
+loginArena.addEventListener('pointermove',e=>{
+ if(e.pointerType==='touch'||dodges>=8||loginDone)return;
+ const r=loginButton.getBoundingClientRect();
+ const dx=Math.max(r.left-e.clientX,0,e.clientX-r.right);
+ const dy=Math.max(r.top-e.clientY,0,e.clientY-r.bottom);
+ if(Math.hypot(dx,dy)<105)dodgeLogin();
+});
+loginButton.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')dodgeLogin()});
+loginButton.addEventListener('pointerdown',e=>{if(e.pointerType!=='touch'&&dodges<8){e.preventDefault();dodgeLogin()}});
+$('fakeLogin').addEventListener('submit',e=>{e.preventDefault();if(!loginDone&&dodges<8){dodgeLogin();note('ACCESS DENIED: button has commitment issues.');return}loginDone=true;render('LOGIN SUCCESS???','🎉 ACCESS GRANTED!','Welcome to your account. Unfortunately, your account has no features, no dashboard and no purpose.',[['Go back to suffering',()=>{closePopup();note('Thank you for logging into absolutely nothing.')}],['Claim my certificate',()=>{closePopup();step=0;showStage()}]])});
+// Fictional security gag: never display, store, or transmit the entered password.
+function passwordOwnershipJoke(){
+ if(passwordOwnerShown||!passwordInput.value||!$('popup').classList.contains('hidden'))return;
+ passwordOwnerShown=true;
+ render('SECURITY.EXE HAS LEFT THE CHAT','🚨 PASSWORD ALREADY TAKEN!',
+ 'This password already belongs to max@toris.co.za. Please stop borrowing his password. Our security team would investigate, but Max is also our security team.',
+ [['That seems like a security vulnerability',()=>{closePopup();note('We prefer the term “community password sharing”.')}],
+ ['Tell Max to get his own',()=>{closePopup();note('Max has escalated this to Max.')}]]
+ );
+ const disclaimer=document.createElement('p');
+ disclaimer.className='mini';
+ disclaimer.textContent='Fictional joke. No account lookup happened. Your password stays in this form.';
+ $('popupInner').append(disclaimer);
+}
+passwordInput.addEventListener('blur',passwordOwnershipJoke);
+showPassword.addEventListener('click',()=>{if($('windowTitle').textContent==='SECURITY.EXE HAS LEFT THE CHAT'&&!$('popup').classList.contains('hidden'))return;passwordInput.type='password';laughWall.classList.add('show');burstLaugh();note('Password visibility request denied. The website is laughing at you.');render('PASSWORD VIEWER','😂 NICE TRY!','This website does not show passwords. It only shows disrespect.',[['I feel judged',()=>closePopup()],['Laugh with the website',()=>{closePopup();burstLaugh();note('Mutual laughter achieved.')} ]])});
+function beep(){if(!sound)return;try{const ctx=new (window.AudioContext||window.webkitAudioContext)(),o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.frequency.value=370+Math.random()*400;o.type='square';g.gain.value=.035;o.start();o.stop(ctx.currentTime+.08);o.onended=()=>ctx.close()}catch(e){}}
+function note(t){clearTimeout(toastTimer);$('toast').textContent=t;$('toast').classList.remove('hidden');toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),2800)}
+function render(title,head,body,buttons){clearInterval(loadingTimer);clearTimeout(closureTimer);if($('popup').classList.contains('hidden'))lastFocus=document.activeElement;$('windowTitle').textContent=title;const inner=$('popupInner');inner.replaceChildren();const h=document.createElement('h2');h.id='popTitle';h.textContent=head;const p=document.createElement('p');p.textContent=body;const actions=document.createElement('div');actions.className='actions';buttons.forEach(([label,fn])=>{const b=document.createElement('button');b.textContent=label;b.addEventListener('click',fn);actions.append(b)});inner.append(h,p,actions);$('overlay').classList.remove('hidden');$('popup').classList.remove('hidden');$('close').focus();beep()}
+function closePopup(){clearInterval(loadingTimer);if($('popup').classList.contains('hidden'))return;$('overlay').classList.add('hidden');$('popup').classList.add('hidden');if(lastFocus&&lastFocus.isConnected)lastFocus.focus();closed++;$('count').textContent=closed;$('satisfaction').textContent=Math.max(0,100-closed*17)+'% (suspicious)'}
+function next(){closePopup();if(step<stages.length){showStage()}else finish()}
+function showStage(){const s=stages[step++];render(s.title,s.heading,s.body,s.buttons.map(([label,act])=>[label,()=>{if(act==='cookieNo')note('Your biscuit preferences have been escalated to management.');if(act==='human')note('Robot confidence: 103%. Not suspicious at all.');if(act==='rate')note('Thank you! Your feedback has been converted into confetti.');if(act==='upgrade')note('Premium successfully not installed.');if(act==='load'){load();return}next()}]))}
+function load(){clearInterval(loadingTimer);let pct=0;const tick=()=>{if($('popup').classList.contains('hidden'))return;pct+=Math.floor(Math.random()*19)+8;if(pct>=99){clearInterval(loadingTimer);render('PROCESS COMPLETE?', '🎉 99% COMPLETE!', 'Final 1% is currently on annual leave.',[['Bribe the last 1%',finish],['Restart the loading screen',load]]);return}$('popupInner').querySelector('p').textContent=`Loading your loading screen: ${pct}%`;};render('PROGRESS WINDOW','⏳ PLEASE WAIT', 'Loading your loading screen: 0%',[['Speed up (does nothing)',()=>note('Speed setting: placebo mode')]]);loadingTimer=setInterval(tick,480)}
+function finish(){clearInterval(loadingTimer);closePopup();step=stages.length;render('YOU WON (?)','🏆 CONGRATULATIONS!','You have unlocked a certificate worth absolutely nothing.',[['Reveal glorious certificate',certificate],['I want MORE POPUPS',()=>{step=0;next()}]])}
+function certificate(){closed++;$('count').textContent=closed;render('CERTIFICATE OF SUFFERING','🏅 CERTIFIED POPUP SURVIVOR','Officially recognized for demonstrating questionable patience.',[['Make it rain',rain],['Start again',restart]]);let cert=document.createElement('div');cert.className='cert';const a=document.createElement('strong');a.textContent='CERTIFICATE OF INTERNET ENDURANCE';const b=document.createElement('p');b.textContent='Awarded to: YOU · Achievement: survived a website with commitment issues';cert.append(a,b);$('popupInner').insertBefore(cert,$('popupInner').querySelector('.actions'));rain()}
+function rain(){const symbols=['🍪','💥','🏆','🧀','⭐','❗'];for(let i=0;i<30;i++){let s=document.createElement('span');s.className='rain';s.textContent=symbols[i%symbols.length];s.style.left=(Math.random()*100)+'vw';s.style.top=(-10-Math.random()*50)+'vh';s.style.animationDelay=(Math.random()*1)+'s';document.body.append(s);setTimeout(()=>s.remove(),4000)}note('Confetti generated. Emotional damages not included.')}
+function restart(){clearTimeout(repairTimer);repairActive=false;document.body.classList.remove('repaired');$('repairSite').textContent='✨ FIX THIS WEBSITE';$('volumeKnob').value='50';$('volumeOutput').textContent='50% · Drag to improve your experience*';originalHeadline.style.letterSpacing='';clearTimeout(closureTimer);clearInterval(loadingTimer);$('ad').classList.remove('hidden');document.querySelectorAll('.rain').forEach(el=>el.remove());closePopup();step=0;closed=0;flight=0;resetLogin();$('count').textContent='0';$('satisfaction').textContent='100% (unverified)';document.body.classList.remove('worse');chaos=false;note('Reset complete. Regrettably, the website still exists.')}
+$('start').addEventListener('click',()=>{if(step>=stages.length)step=0;showStage()});$('close').addEventListener('click',()=>{closePopup();note('Popup dismissed. The website is taking this personally.');closureTimer=setTimeout(()=>{if(step>0&&step<=stages.length&&$('popup').classList.contains('hidden'))render('CLOSURE CONFIRMATION','😤 Did you just close me?','Closing a popup without filling in the exit survey is extremely rude.',[['I apologize',next],['I regret nothing',next]])},350)});$('reset').addEventListener('click',restart);$('worse').addEventListener('click',()=>{chaos=!chaos;document.body.classList.toggle('worse',chaos);note(chaos?'CHAOS MODE ACTIVATED. Why would you do that?':'Chaos mode off. Still visually illegal.');if(chaos)rain()});$('help').addEventListener('click',()=>render('HELPLESS DESK','🆘 HOW CAN WE HELP?','Step 1: Click a button. Step 2: Experience regret. Step 3: Contact a potato.',[['This helped absolutely nobody',()=>{closePopup();note('You are welcome!')}]]));$('adButton').addEventListener('click',()=>{note('Your nothing has been shipped. Delivery: never.');$('ad').classList.add('hidden')});$('sound').addEventListener('click',()=>{sound=!sound;$('sound').textContent=sound?'🔊 SOUND ON':'🔇 SOUND OFF';$('sound').setAttribute('aria-pressed',String(sound));beep()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closePopup();if(e.key==='Tab'&&!$('popup').classList.contains('hidden')){const items=[...$('popup').querySelectorAll('button')];const first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+let cookieRound=0,repairTimer,repairActive=false;
+const originalHeadline=$('start').closest('main').querySelector('.headline');
+$('volumeKnob').addEventListener('input',()=>{
+ const value=Number($('volumeKnob').value);
+ originalHeadline.style.letterSpacing=(value/5-10)+'px';
+ $('volumeOutput').textContent=value+'% · '+(value<25?'Volume unchanged. Your letters are now carpooling.':value>75?'Volume unchanged. Your letters need separate parking bays.':'Plot twist: this is the letter-spacing slider.');
+});
+function cookieNegotiation(){
+ const offers=[
+ ['🍪 Before you reject us…','Our cookies have families. Could you accept just one emotionally essential biscuit?','Reject them anyway'],
+ ['🥺 Think of the crumbs','We have reduced our request from 400 cookies to one lonely tennis biscuit.','I said NO'],
+ ['📞 Retention department','A senior biscuit would like to offer you a complimentary guilt trip.','Reject the guilt trip too'],
+ ['✅ YOUR CHOICE IS RESPECTED','Zero cookies saved. Three rounds of emotional blackmail delivered. Privacy: 100%. Dignity: pending.','Finally. Thank you.']
+ ];
+ const item=offers[cookieRound];
+ render('COOKIE NEGOTIATIONS · ROUND '+(cookieRound+1),item[0],item[1],cookieRound<3?
+ [[item[2],()=>{cookieRound++;cookieNegotiation()}],['Fine. One imaginary biscuit.',()=>{closePopup();rain();note('One imaginary biscuit accepted. No browser cookies were set.')}]]:
+ [[item[2],()=>{closePopup();note('Your refusal has been accepted. The biscuit is crying.')}]]
+ );
+ const meter=document.createElement('div');meter.className='cookie-meter';
+ const fill=document.createElement('span');fill.style.width=((3-cookieRound)/3*100)+'%';meter.append(fill);
+ const caption=document.createElement('p');caption.className='mini';caption.textContent='Biscuit self-esteem: '+Math.round((3-cookieRound)/3*100)+'%';
+ $('popupInner').append(meter,caption);
+}
+$('cookieSettings').addEventListener('click',()=>{cookieRound=0;cookieNegotiation()});
+$('repairSite').addEventListener('click',()=>{
+ if(repairActive)return;
+ repairActive=true;document.body.classList.remove('worse');chaos=false;document.body.classList.add('repaired');
+ $('repairSite').textContent='✓ DESIGN FIXED. SUSPICIOUS.';
+ note('A competent designer has briefly entered the chat.');
+ repairTimer=setTimeout(()=>{
+  document.body.classList.remove('repaired');repairActive=false;$('repairSite').textContent='✨ FIX THIS WEBSITE';
+  render('FREE TRIAL EXPIRED','💸 GOOD DESIGN TRIAL ENDED','Your 4 seconds of good taste have expired. The budget only covers Comic Sans. Your terrible experience has been restored.',
+  [['Return to our regularly scheduled disaster',()=>{closePopup();rain()}],['Request a refund',showReceipt]]);
+ },4000);
+});
+function showReceipt(){
+ render('ACCOUNTS DEPARTMENT','🧾 YOUR REFUND RECEIPT','We value your time. At approximately R0.00 per hour.',[
+ ['Refund my patience',()=>{closePopup();note('Refund issued: 0 patience. Processing time: 6–8 emotional business years.')}],
+ ['Speak to a manager',()=>render('MANAGER CONNECTED','🥔 You are speaking to a potato','The manager is currently out of office. And in a packet of chips.',[['That explains everything',closePopup]])]
+ ]);
+ const receipt=document.createElement('div');receipt.className='receipt';
+ receipt.textContent=`POPUP APOCALYPSE — TAX INVOICE-ISH
+--------------------------------
+Popups endured          ${closed}
+Button evasions         ${dodges} / 8
+Amount paid             R0.00
+Emotional handling fee  R999.99
+Chaos discount         -R999.99
+--------------------------------
+TOTAL REFUND            R0.00
+
+This is a joke receipt. No charges.`;
+ $('popupInner').insertBefore(receipt,$('popupInner').querySelector('.actions'));
+}
+$('receiptButton').addEventListener('click',showReceipt);
+
+})();
+</script>
+</body>
+</html>
